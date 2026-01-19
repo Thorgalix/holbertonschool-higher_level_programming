@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-L = int(input("Veuillez saisir le nombre de lignes : "))
-c = int(input("Veuillez saisir le nombre de colonnes : "))
+fruits1 = {'pomme' : 1.50, 'ananas' : 2.20}
+fruits2 = {'orange' : 2.00, 'kiwi' : 5.20}
+print (fruits1.get("pomme"), "avant")
+print (fruits1.get("ananas"), "avant")
 
-for i in range(L):
-    for j in range(c):
-        print("*", end=" ")
-    print()
+fruits1["pomme"] = 2.10
+fruits1["ananas"] = 3.50
+
+print (fruits1.get("pomme"), "après")
+print (fruits1.get("ananas"), "après")
+
 
