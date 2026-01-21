@@ -16,11 +16,8 @@ def add_integer(a, b=98):
     Retourne :
         int : la somme de a et b
     """
-    if not isinstance(a, (int, float)):
+    if not isinstance(a, (int, float)) or a != a:  # a != a vérifie NaN
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if not isinstance(b, (int, float)) or b != b:
         raise TypeError("b must be an integer")
-
-    a = int(a)
-    b = int(b)
-    return a + b
+    return int(a) + int(b)
