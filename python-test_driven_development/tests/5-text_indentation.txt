@@ -1,0 +1,47 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Cas simple avec un point
+>>> text_indentation("Hello. How are you?")
+Hello.
+<BLANKLINE>
+How are you?
+
+# Cas avec plusieurs séparateurs ., ?, :
+>>> text_indentation("Hello. Are you okay? Yes: I am.")
+Hello.
+<BLANKLINE>
+Are you okay?
+<BLANKLINE>
+Yes:
+<BLANKLINE>
+I am.
+
+# Cas avec espaces au début et à la fin
+>>> text_indentation("  Hello. World!  ")
+Hello.
+<BLANKLINE>
+World!
+
+# Cas type invalide : int
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+# Cas type invalide : float
+>>> text_indentation(3.14)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+# Cas type invalide : None
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+# Cas type invalide : bool
+>>> text_indentation(True)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
