@@ -29,7 +29,7 @@ class VerboseList(list):
             iterable: An iterable with elements to add to the list.
         """
         super().extend(iterable)
-        print("Extended the list with [{}] items".format(len(iterable)))
+        print("Extended the list with [{}] items.".format(len(iterable)))
 
     def remove(self, item):
         """
