@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module that defines a custom list class with a method to print it sorted."""
+
+
 class MyList(list):
     """Custom list class that can print itself sorted."""
 
