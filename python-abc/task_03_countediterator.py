@@ -20,7 +20,3 @@ class CountedIterator:
         """Return the next item and increment the count."""
         self.count += 1
         return next(self.iterator)
-
-    def __iter__(self):
-        """Return self as an iterator."""
-        return self
