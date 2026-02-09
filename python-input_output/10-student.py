@@ -35,7 +35,8 @@ class Student:
         Otherwise, all instance attributes are returned.
 
         Args:
-            attrs (list, optional): List of attribute names to retrieve. Defaults to None.
+            attrs (list, optional): List of attribute names to retrieve.
+            Defaults to None.
 
         Returns:
             dict: Dictionary containing the selected instance attributes.
