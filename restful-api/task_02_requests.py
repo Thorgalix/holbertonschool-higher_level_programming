@@ -25,7 +25,7 @@ def fetch_and_print_posts():
     Aucun (affiche directement dans la console).
     """
     response = requests.get(url)
-    print(f"status code: {response.status_code}")
+    print(f"Status code: {response.status_code}")
 
     if response.status_code == 200:
         data = response.json()
