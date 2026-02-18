@@ -15,6 +15,14 @@ auth = HTTPBasicAuth()
 app.config["JWT_SECRET_KEY"] = "a_very_long_random_secret_key_with_more_than_32_chars!"
 jwt = JWTManager(app)
 
+@jwt.unauthorized_loader
+def unauthorized_callback(callback):
+    return jsonify({"error": "Missing or invalid token"}), 401
+
+@jwt.invalid_token_loader
+def invalid_token_callback(callback):
+    return jsonify({"error": "Invalid token"}), 401
+
 users = {
     "user1": {
         "username": "user1",
@@ -79,7 +87,7 @@ def admin_only():
         return jsonify({"error": "Admin access required"}), 403
     if user_info["role"] != "admin":
         return jsonify({"error": "Admin access required"}), 403
-    return jsonify({"message": "Admin Access: Granted"}), 200
+    return "Admin Access: Granted"
 
 
 if __name__ == '__main__':
