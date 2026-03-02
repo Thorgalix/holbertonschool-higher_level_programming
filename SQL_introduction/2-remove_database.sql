@@ -1,0 +1,2 @@
+-- Script pour supprimer une database
+DROP DATABASE IF EXISTS hbtn_0c_0;
