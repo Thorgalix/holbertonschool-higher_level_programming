@@ -7,3 +7,5 @@ test.py
 *.xml
 .venv/
 *.csv
+Local.session.sql
+.vscode
