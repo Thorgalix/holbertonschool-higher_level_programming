@@ -12,3 +12,9 @@ listall.sql
 *.csv
 Local.session.sql
 .vscode
+# Ignore tout dans SQL_more_queries par défaut
+SQL_more_queries/*
+# Sauf les fichiers qui commencent par un chiffre
+!SQL_more_queries/[0-9]*.sql
+# Sauf le README
+!SQL_more_queries/README.md
