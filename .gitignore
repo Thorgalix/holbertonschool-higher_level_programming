@@ -1,9 +1,14 @@
 __pycache__
+example_orm.py
+mysql_drivers_config.py
+ORM_USAGE_GUIDE.md
+quick_start_orm.py
 test.py
 test.sql
 drop.sql
 listall.sql
-*.txt
+*.txt/*
+!requirements.txt
 *.json
 *.pkl
 *.json
