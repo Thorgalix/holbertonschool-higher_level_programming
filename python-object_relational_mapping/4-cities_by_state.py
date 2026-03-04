@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-This script connects to a MySQL database and retrieves all records from the
-'cities' table, ordered by their 'id' in ascending order.
-The database credentials and name are provided as command-line arguments.
-The results are printed to the console.
+This script lists all cities from the database hbtn_0e_4_usa
+with their corresponding state name.
+It takes 3 arguments: mysql username, mysql password, and database name.
+Results are ordered by cities.id in ascending order.
 """
 import MySQLdb
 import sys
@@ -18,9 +18,8 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-    cursor.execute("SELECT cities.id, cities.name, states.name "
-                   "FROM cities "
-                   "JOIN states ON cities.state_id = states.id "
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities " +
+                   "JOIN states ON cities.state_id = states.id " +
                    "ORDER BY cities.id ASC")
 
     rows = cursor.fetchall()
