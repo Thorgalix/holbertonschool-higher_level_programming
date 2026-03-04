@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     # Build SQL query using parameterized query
-    cursor.execute("SELECT * FROM states WHERE BINARY name = %s "
+    cursor.execute("SELECT * FROM states WHERE name = %s "
                    "ORDER BY id ASC", (sys.argv[4],))
 
     # Print rows exactly as tuples
