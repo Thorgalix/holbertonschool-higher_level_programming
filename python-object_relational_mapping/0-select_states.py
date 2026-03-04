@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This script connects to a MySQL database and retrieves all records from the
+'states' table, ordered by their 'id' in ascending order.
+The database credentials and name are provided as command-line arguments.
+The results are printed to the console.
+"""
 import MySQLdb
 import sys
 
@@ -17,6 +23,6 @@ if __name__ == "__main__":
     rows = cursor.fetchall()
     for row in rows:
         print(row)
-    
+
     cursor.close()
     db.close()
