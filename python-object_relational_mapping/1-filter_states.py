@@ -1,10 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
-This script connects to a MySQL database and retrieves all records from the
-'states' table where the name starts with 'N', ordered by their 'id' in
-ascending order.
-The database credentials and name are provided as command-line arguments.
-The results are printed to the console.
+Lists all states starting with 'N' from hbtn_0e_0_usa.
 """
 import MySQLdb
 import sys
@@ -15,15 +11,15 @@ if __name__ == "__main__":
         port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3]
+        db=sys.argv[3],
+        auth_plugin='mysql_native_password'
     )
 
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    with db.cursor() as cursor:
+        cursor.execute(
+            "SELECT * FROM states WHERE name LIKE 'N%'ORDER BY id ASC"
+            )
+        for row in cursor.fetchall():
+            print(row)
 
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
-
-    cursor.close()
     db.close()
