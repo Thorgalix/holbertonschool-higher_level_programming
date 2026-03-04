@@ -1,8 +1,4 @@
 __pycache__
-example_orm.py
-mysql_drivers_config.py
-ORM_USAGE_GUIDE.md
-quick_start_orm.py
 test.py
 test.sql
 drop.sql
@@ -15,6 +11,7 @@ listall.sql
 *.xml
 .venv/
 *.csv
+Doc
 Local.session.sql
 .vscode
 # Ignore tout dans SQL_more_queries par défaut
