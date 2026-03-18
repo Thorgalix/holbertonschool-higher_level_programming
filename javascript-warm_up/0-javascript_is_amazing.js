@@ -4,5 +4,5 @@
 * You must use an array and a loop to print the string
 */
 
-const str = "JavaScript is amazing";
+const str = 'JavaScript is amazing';
 console.log(str);
